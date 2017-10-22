@@ -58,7 +58,7 @@ class BinarySearchTree
 
   def delete(value)
     target = find(value)
-    p target
+    # p target
     if target.parent == nil # if target is root
       @root = nil
       return @root
@@ -74,6 +74,8 @@ class BinarySearchTree
     else #target has 2 children
       replacement = maximum(target.left)
       replacement2 = replacement
+      old_left = target.left
+      old_right = target.right
 
       target.left.parent = replacement
       target.right.parent = replacement
@@ -81,7 +83,7 @@ class BinarySearchTree
       target.parent.right = replacement if target.parent.value < value
       if replacement.left
         replacement.left.parent = replacement2.parent
-        replacement.parent.right = replacement2.left.parent
+        replacement.parent.right = replacement2.left
       end
     end
   end
@@ -105,19 +107,28 @@ class BinarySearchTree
   end
 
   def depth(tree_node = @root)
-    max_depth = 0
-    depth = 0
-    while tree_node.left || tree_node.right
-      depth +=1
-      tree_node = tree_node.left || tree_node.right
-    end
-    return max_depth
+    return 0 if tree_node.nil? || (tree_node.left.nil? && tree_node.right.nil?)
+    return 1 + [depth(tree_node.left), depth(tree_node.right)].max
   end
 
   def is_balanced?(tree_node = @root)
+    return true if tree_node.nil? || (tree_node.left.nil? && tree_node.right.nil?)
+    return false if (depth(tree_node.right) - depth(tree_node.left)).abs > 1
+    [is_balanced?(tree_node.left), is_balanced?(tree_node.right)].all?
   end
 
   def in_order_traversal(tree_node = @root, arr = [])
+
+   in_order_traversal(tree_node.left, arr) if tree_node.left
+   arr << tree_node.value
+   in_order_traversal(tree_node.right, arr) if tree_node.right
+   return arr
+
+  end
+
+  def self.size(tree_node = @root)
+    return 0 if tree_node.nil?
+    1 + size(tree_node.left) + size(tree_node.right)
   end
 
 
