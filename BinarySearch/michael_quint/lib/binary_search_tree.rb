@@ -85,7 +85,6 @@ class BinarySearchTree
       end
     end
   end
-
   # helper method for #delete:
   def maximum(tree_node = @root)
     maxval = tree_node.value
