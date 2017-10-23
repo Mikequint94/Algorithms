@@ -8,9 +8,7 @@ def mergemeeting(meetings)
     end
   end
 
-
   return meetings.compact
 end
 
-
-p mergemeeting([[6,8],[1,2],[7,8],[0,1],[3,4], [10,11],[9,12]]) ## [[0,2],[3,4],[6,8]]
+# p mergemeeting([[6,8],[1,2],[7,8],[0,1],[3,4], [10,11],[9,12]]) ## [[0,2],[3,4],[6,8]]
