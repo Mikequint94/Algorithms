@@ -47,7 +47,7 @@ class BinarySearchTree
       return nil unless search_item
       if search_item.value == value
         found = true
-      elsif search_item.value >= value
+      elsif search_item.value > value
         search_item = search_item.left
       else
         search_item = search_item.right
