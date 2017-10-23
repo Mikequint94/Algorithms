@@ -74,8 +74,6 @@ class BinarySearchTree
     else #target has 2 children
       replacement = maximum(target.left)
       replacement2 = replacement
-      old_left = target.left
-      old_right = target.right
 
       target.left.parent = replacement
       target.right.parent = replacement
