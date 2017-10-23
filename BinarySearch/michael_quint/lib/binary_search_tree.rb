@@ -129,8 +129,4 @@ class BinarySearchTree
     1 + size(tree_node.left) + size(tree_node.right)
   end
 
-
-  private
-  # optional helper methods go here:
-
 end
