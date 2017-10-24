@@ -82,6 +82,21 @@ class BinarySearchTree
     arr
   end
 
+  def in_order_traversal_iteratively(tree_node = @root)
+    sorted = false
+    array = []
+    until sorted
+      if tree_node.left
+        tree_node = tree_node.left
+      else
+        array.push(tree_node)
+        tree_node = tree_node.right if tree_node.right
+      end
+
+
+
+  end
+
 
 
   private

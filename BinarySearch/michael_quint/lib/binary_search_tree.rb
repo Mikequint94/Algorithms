@@ -115,7 +115,7 @@ class BinarySearchTree
     [is_balanced?(tree_node.left), is_balanced?(tree_node.right)].all?
   end
 
-  def in_order_traversal(tree_node = @root, arr = [])
+  def in_order_traversal(tree_node = @root, arr = [])  #good for sorting
 
    in_order_traversal(tree_node.left, arr) if tree_node.left
    arr << tree_node.value
@@ -130,3 +130,8 @@ class BinarySearchTree
   end
 
 end
+
+#Post order transversal - good for  deleting
+#  Check left then right then node
+#Pre order - good for copying
+#  Check node then left then right
