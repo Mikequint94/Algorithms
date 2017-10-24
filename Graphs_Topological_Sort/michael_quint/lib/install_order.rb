@@ -14,7 +14,11 @@ def install_order(arr)
   vertex_hash = {}
 
   arr.each do |packages|
+    maxpax = 0
     packages.each do |package_id|
+      maxpax = package_id if package_id > maxpax
+    end
+    (1..maxpax).each do |package_id|
       vertex_hash[package_id] ||= Vertex.new(package_id)
     end
   end
