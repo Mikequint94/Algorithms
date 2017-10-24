@@ -7,8 +7,27 @@
 
 # Import any files you need to
 
-
+require_relative 'topological_sort'
 
 def install_order(arr)
+  vertices = []
+  vertex_hash = {}
+
+  arr.each do |packages|
+    packages.each do |package_id|
+      vertex_hash[package_id] ||= Vertex.new(package_id)
+    end
+  end
+
+  vertex_hash.values.each do |vertex|
+    vertices.push(vertex)
+  end
+  arr.each do |tuple|
+    to_vertex = vertex_hash[tuple[0]]
+    from_vertex = vertex_hash[tuple[1]]
+    Edge.new(from_vertex, to_vertex)
+  end
+
+  topological_sort(vertices).map {|vertex| vertex.value}
 
 end
