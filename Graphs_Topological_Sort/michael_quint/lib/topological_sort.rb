@@ -3,7 +3,7 @@ require 'byebug'
 
 # Implementing topological sort using both Khan's and Tarian's algorithms
 
-def topological_sort(vertices) # Kahn's Algorithm
+def topological_sort(vertices) # Kahn's Algorithm.  Queue is breadth first search
   sorted = []
   top_queue = []
   in_edge_count = Hash.new(0)
@@ -28,3 +28,5 @@ def topological_sort(vertices) # Kahn's Algorithm
     return []
   end
 end
+
+#stack is depth first search.  Worse in this case.
