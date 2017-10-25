@@ -27,6 +27,6 @@ describe 'Super Frog Hops' do
   end
 
   it 'runs in non-exponential time' do
-    expect { dp.super_frog_hops(10, 10)}.to perform_under(100).ms
+    expect { dp.super_frog_hops(10, 10)}.to perform_under(200).ms
   end
 end
