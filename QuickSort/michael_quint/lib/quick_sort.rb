@@ -27,7 +27,6 @@ class QuickSort
     prc = prc || Proc.new {|el1, el2| el1 <=> el2}
 
     return array if length <= 1
-    # pivot = array[rand(start...length)]
     pivot_idx = partition(array, start, length, &prc)
 
     sort2!(array, start, pivot_idx - start, &prc)
@@ -38,7 +37,7 @@ class QuickSort
 
   def self.partition(array, start, length, &prc)
     prc = prc || Proc.new {|el1, el2| el1 <=> el2}
-    
+
     pivot_idx = start
     pivot = array[start]
 
