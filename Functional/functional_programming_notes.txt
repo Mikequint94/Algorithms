@@ -19,3 +19,9 @@ like react/redux.  My code never mutates DOM or mutates state,
 impure functions could be doing anything (hidden inputs/outputs), but pure function you know exactly what it does or doesnt do.
 
 Therefore, a pure function can never break other code
+
+map is pure, but  for loop cant be parallelized
+
+Apache Spark is a fast and general engine for large-scale data processing
+  - supports Python, Java, Scala
+  - RDD (Resilient Data D...)
