@@ -1,0 +1,21 @@
+Functional Programming:
+
+style of programming in which pure functions are the main unit of computation
+
+Nicer than imperative like jQuery vs. React (nicer).
+possible in all languages, better in some
+
+No side effects to be pure:
+no ajax requests, printing, changing external state.
+
+Same input => always same output is pure function.
+
+purity requires immutability.
+
+functional core, imperative shell.
+like react/redux.  My code never mutates DOM or mutates state,
+  the impure parts are not the important part.
+
+impure functions could be doing anything (hidden inputs/outputs), but pure function you know exactly what it does or doesnt do.
+
+Therefore, a pure function can never break other code
