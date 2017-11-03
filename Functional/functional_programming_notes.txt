@@ -25,3 +25,38 @@ map is pure, but  for loop cant be parallelized
 Apache Spark is a fast and general engine for large-scale data processing
   - supports Python, Java, Scala
   - RDD (Resilient Data D...)
+
+Why doesn't everybody do this?
+
+historical limitations in memory, functional programming uses more memory
+parallelism has only been needed recently
+entrenched in education/language design
+doesn't always align with real world perception
+but things are changing!
+What next?
+
+JS
+Brian Lonsdorf
+Oh Composable world
+Egghead series
+Immutable.js
+Explanation video
+Elm
+Tutorial
+Performance
+
+takes times and memory
+"if you want fast, start with comprehensible" Paul Phillips
+lazy evaluation
+doing work at the latest, most efficient way possible
+[1, 2, 3, 4, 5]
+  .filter(x => x % 2 !== 0)
+  .map(x => x * x)
+  [1];
+
+import { Seq} from 'immutable';
+Seq([1, 2, 3, 4, 5])
+  .filter(x => x % 2 !== 0)
+  .map(x => x * x)
+  .get(1);
+memoization, using cached values
