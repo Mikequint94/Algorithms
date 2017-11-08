@@ -24,3 +24,9 @@ async function z() {
   Serverless - means just microservers, no monolithic codebase.
 
 ajax isnt necessary, axios is good - used on DreamCapture
+
+Youtube vid:  Netflix JavaScript Talks -RxJS + Redux + React.
+
+problem:  so many callbacks, hard to read.
+  came up with promises.  .then.then.then  - more readable.
+    -even better is new async and await
