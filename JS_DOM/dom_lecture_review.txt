@@ -1,3 +1,24 @@
 Why is JS the browser language?  it was the first - wont change cause too much work
 
-Most sites dont use jQuery anymore.  Anything you can do on jQuery you can do with vanilla DOM manipulation
+Most sites dont use jQuery anymore.  Anything you can do on jQuery you can do with vanilla DOM manipulation.  Back in the day it was good when browsers weren't standardized, etc.
+
+$(.div)  can index into that
+$(callback) == $(document).ready(callback)
+== $(document).on("ready").callback
+
+async await #future es8 way to make promise objects cleaner
+
+async function z() {
+  let x = await y();
+  return x;
+  }
+
+  must pair async and await.  good for having functions wait for other async functions to resolve before resolving.  pretty cool
+
+  CodeSplitting:  with webpack can use react to go from single page app to multiple page apps using different bundle.js files
+
+  Microservices:  abstracting pieces from a giant monolithic codebase into smaller AWS microservices in terms of api endpoints.
+
+  They exist around monolithic codebase.  benefit: easier to change/debug.  doesn't crash entire site when taking off line.
+
+  Serverless - means just microservers, no monolithic codebase.
