@@ -1,0 +1,3 @@
+Why is JS the browser language?  it was the first - wont change cause too much work
+
+Most sites dont use jQuery anymore.  Anything you can do on jQuery you can do with vanilla DOM manipulation
