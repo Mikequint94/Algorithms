@@ -22,3 +22,5 @@ async function z() {
   They exist around monolithic codebase.  benefit: easier to change/debug.  doesn't crash entire site when taking off line.
 
   Serverless - means just microservers, no monolithic codebase.
+
+ajax isnt necessary, axios is good - used on DreamCapture
